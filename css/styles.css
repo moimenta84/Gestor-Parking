@@ -33,7 +33,7 @@ body {
   background: url("../assets/img/imagen.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #f4f4f4;
-   min-height: 100vh;
+  min-height: 100vh;
   backdrop-filter: blur(2px);
 }
 
