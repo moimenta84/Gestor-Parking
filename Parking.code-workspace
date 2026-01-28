@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../../../../../2_Daw/Cliente"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Parking"
+  }
+}

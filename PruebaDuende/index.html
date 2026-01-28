@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Configura la codificación para permitir caracteres especiales -->
+    <title>Fábrica de Juguetes de Santa</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Enlace al archivo CSS externo con los estilos de la página -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Fuente decorativa de Google Fonts para darle estilo navideño al texto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap"rel="stylesheet">
+  </head>
+  <header>
+      <h1>Fabrica juguetes</h1>
+      <div class="header-right">
+        <div id="contadorPlazas" class="contador"></div>
+      </div>
+    </header>
+
+    <main>
+   
+  <body>
+    <!-- ================= CABECERA DE LA PÁGINA ================= -->
+    <header>
+      <div class="header-left">
+        <h1>Fábrica de Juguetes del Polo Norte</h1>
+        <!-- Título principal -->
+
+        <!-- Aquí se mostrará dinámicamente el nombre del duende -->
+        <h2 id="duende"></h2>
+
+        <!-- Botón para cambiar aleatoriamente el duende -->
+        <button id="cambiar">Cambiar duende</button>
+      </div>
+
+      <div class="header-right">
+        <!-- Aquí se mostrará la cuenta atrás para Navidad -->
+        <p id="cuentaAtras"></p>
+      </div>
+    </header>
+
+    <!-- ================= FORMULARIO DE REGISTRO ================= -->
+    <section id="registro">
+
+      <h2>Registro de niños y niñas</h2>
+
+>
+      <!-- Aquí se generarán dinámicamente campos para elegir juguetes -->
+      <div id="jugueteContainer"></div>
+
+      <!-- Botón para registrar los datos introducidos -->
+      <button id="registrar">Registrar</button>
+    </section>
+
+    <!-- ================= BOTONES DE ACCIONES ================= -->
+    <section id="acciones">
+      <!-- Muestra el listado completo en pantalla -->
+     
+ <button id="ver">Ver listado</button>
+      <!-- Simula el envío de datos al Polo Norte -->
+      <button id="enviar">Enviar al Polo Norte</button>
+    </section>
+     </main>
+     
+
+    <!-- ================= ZONA DONDE SE IMPRIME EL LISTADO ================= -->
+    <section id="listado"></section>
+
+    <!-- Archivo JavaScript donde está la lógica de la página -->
+    <script src="panelDuendes.js"></script>
+  </body>
+</html>

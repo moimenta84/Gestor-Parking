@@ -1,0 +1,108 @@
+body {
+  font-family: "Mountains of Christmas", cursive;
+  /* Fuente decorativa navideña obtenida de Google Fonts */
+
+  background: url("Foto.jpg") no-repeat center center fixed;
+  /* Imagen de fondo que:
+       - no se repite
+       - se centra horizontal y verticalmente
+       - queda fija al hacer scroll */
+
+  background-size: cover;
+  /* Hace que la imagen cubra toda la pantalla sin deformarse */
+
+  color: white;
+  /* Color de texto global */
+
+  text-align: center;
+  /* Todo el contenido del body queda centrado horizontalmente */
+
+  margin: 0;
+  /* Elimina el margen por defecto del navegador */
+}
+
+header {
+  display: flex;
+  /* Convierte el header en un contenedor flexible */
+
+  justify-content: space-between;
+  /* Distribuye los elementos del header a izquierda y derecha */
+
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Fondo negro semi-transparente (0.6) para mejor legibilidad */
+
+  padding: 15px;
+  /* Espaciado interno alrededor del contenido */
+
+  border-bottom: 3px solid gold;
+  /* Línea inferior decorativa en color dorado */
+}
+
+h1,
+h2 {
+  text-shadow: 2px 2px 5px red;
+  /* Sombra roja que da efecto navideño/brillo al texto */
+
+  color: gold;
+  /* Color dorado típico de decoración navideña */
+}
+
+button {
+  background-color: crimson;
+  /* Rojo intenso que encaja con la estética navideña */
+
+  color: white;
+  /* Texto blanco para hacer contraste con el rojo */
+
+  border: none;
+  /* Elimina el borde por defecto del botón */
+
+  border-radius: 10px;
+  /* Bordes redondeados para un aspecto más amable */
+
+  padding: 10px 15px;
+  /* Aumenta el área clicable y mejora la estética */
+
+  cursor: pointer;
+  /* Cambia el cursor a "mano" al pasar sobre el botón */
+}
+#registro {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✔ centra horizontalmente */
+}
+
+#registro form {
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#registro .campo {
+  padding: 8px;
+  width: 220px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 14px;
+}
+
+#jugueteContainer select {
+  margin-top: 10px;
+  padding: 8px;
+  width: 220px;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+#registrar {
+  margin-top: 15px;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}

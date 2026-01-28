@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Gestor de Parking - ParkingPereMaria</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>ParkingPereMaria — Gestor de plazas</h1>
+
+      <div class="header-right">
+        <div id="operarioBienvenida">
+          Bienvenido/a, <span id="saludo"></span> ...
+        </div>
+
+        <div id="contadorPlazas" class="contador"></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- MENU LATERAL -->
+      <aside class="menu">
+        <nav>
+          <button class="menu-btn" data-target="home">Menú principal</button>
+          <button class="menu-btn" data-target="registro">
+            Registrar vehículo
+          </button>
+          <button class="menu-btn" data-target="entrada">
+            Entrada vehículo
+          </button>
+          <button class="menu-btn" data-target="salida">Salida vehículo</button>
+          <button class="menu-btn" data-target="listado">Ver listado</button>
+          <button class="menu-btn" data-target="cambiarOperario">
+            Cambiar operario
+          </button>
+        </nav>
+      </aside>
+
+      <!-- CONTENIDO -->
+      <section class="content">
+        <!-- HOME -->
+        <section id="home" class="panel view">
+          <h2>Panel principal</h2>
+          <p>Selecciona una opción del menú para gestionar el parking.</p>
+
+          <div class="resumen-rapido">
+            <div id="plazasInfo"></div>
+            <div id="mensajes" class="mensajes"></div>
+          </div>
+        </section>
+        <form id="formRegistro">
+          <label>
+            Propietario:
+            <select id="propietario" required>
+              <option value="Alumno">Alumno</option>
+              <option value="Profesor">Profesor</option>
+            </select>
+          </label>
+
+          <label>
+            Tipo:
+            <select id="tipo" required>
+              <option value="Coche">Coche</option>
+              <option value="Moto">Moto</option>
+            </select>
+          </label>
+
+          <label>
+            Matrícula:
+            <input id="matricula" required maxlength="10" />
+          </label>
+        </form>
+
+        <div class="form-actions">
+          <!-- CORREGIDO -->
+          <button type="submit" form="formRegistro">Registrar vehículo</button>
+
+          <button type="button" id="btnRegistroVolver" class="btnVolver">
+            Volver
+          </button>
+        </div>
+
+        <!-- ENTRADA -->
+        <section id="entrada" class="panel view" style="display: none">
+          <h2>Registrar entrada</h2>
+
+          <form id="formEntrada">
+            <label>
+              Matrícula:
+              <input id="matEntrada" required maxlength="10" />
+            </label>
+
+            <div class="form-actions">
+              <button type="submit">Registrar entrada</button>
+              <button type="button" id="btnEntradaVolver" class="btnVolver">
+                Volver
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- SALIDA -->
+        <section id="salida" class="panel view" style="display: none">
+          <h2>Registrar salida</h2>
+
+          <form id="formSalida">
+            <label>
+              Matrícula:
+              <input id="matSalida" required maxlength="10" />
+            </label>
+
+            <div class="form-actions">
+              <button type="submit">Registrar salida</button>
+              <button type="button" class="btnVolver">Volver</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- LISTADO -->
+        <section id="listado" class="panel view" style="display: none">
+          <h2>Listado de vehículos registrados</h2>
+
+          <div id="tablaListado"></div>
+
+          <div class="form-actions">
+            <button class="btnVolver">Volver</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- COOKIES -->
+    <div id="cookie-banner" class="cookie-banner">
+      <p>Usamos cookies obligatorias, de marketing y seguimiento.</p>
+
+      <label
+        ><input type="checkbox" id="cookie-marketing" /> Cookies
+        marketing</label
+      ><br />
+      <label
+        ><input type="checkbox" id="cookie-tracking" /> Cookies
+        seguimiento</label
+      ><br />
+
+      <button id="cookie-accept">Aceptar</button>
+    </div>
+
+    <script src="parkingPanel.js"></script>
+  </body>
+</html>

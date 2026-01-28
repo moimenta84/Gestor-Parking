@@ -1,0 +1,350 @@
+/* ----------------------------------------------------------
+   ParkingPereMaria - CSS Futurista Profesional Corregido
+   ---------------------------------------------------------- */
+
+/* ===============================
+   VARIABLES
+==================================*/
+:root {
+  --bg: #0a0d1a;
+  --panel-bg: rgba(255, 255, 255, 0.08);
+  --panel-border: rgba(255, 255, 255, 0.18);
+  --accent: #2c7be5;
+  --accent-light: #63a4ff;
+  --danger: #ff3d3d;
+  --success: #33dd77;
+  --warning: #ffb92a;
+  --radius: 10px;
+  --blur: 8px;
+  --font: "Bebas Neue", sans-serif;
+}
+
+/* ===============================
+   GLOBAL
+==================================*/
+* {
+  box-sizing: border-box;
+  font-family: var(--font);
+  letter-spacing: 0.8px;
+}
+
+body {
+  margin: 0;
+  background: url("imagen.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #f4f4f4;
+  backdrop-filter: blur(2px);
+}
+
+/* ===============================
+   HEADER
+==================================*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  background: rgba(0, 0, 0, 0.55);
+  border-bottom: 1px solid var(--panel-border);
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* ===============================
+   LAYOUT GENERAL
+==================================*/
+main {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+}
+
+/* ===============================
+   MENÚ LATERAL
+==================================*/
+.menu {
+  width: 260px;
+}
+
+.menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-btn {
+  padding: 14px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--panel-border);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  backdrop-filter: blur(var(--blur));
+  transition: 0.2s;
+  text-align: center;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+}
+
+/* ===============================
+   PANELES DE CONTENIDO
+==================================*/
+.content {
+  flex: 1;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 25px;
+  border-radius: var(--radius);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  min-height: 300px;
+  animation: fadeInPanel 0.35s ease-out;
+}
+
+@keyframes fadeInPanel {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   FORMULARIOS
+==================================*/
+label {
+  display: block;
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--panel-border);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 18px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background: var(--accent);
+  color: white;
+  transition: 0.25s;
+}
+
+button:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+button[type="button"] {
+  background: #666;
+}
+
+button[type="button"]:hover {
+  background: #888;
+}
+
+/* ===============================
+   MENSAJES
+==================================*/
+.mensajes .mensaje {
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  margin-top: 12px;
+  font-size: 18px;
+  color: white;
+  backdrop-filter: blur(5px);
+  animation: slideIn 0.3s ease-out;
+}
+
+.mensaje.ok {
+  background: linear-gradient(135deg, #1fa32a, #33dd77);
+}
+.mensaje.error {
+  background: linear-gradient(135deg, #b80101, #ff3d3d);
+}
+.mensaje.warn {
+  background: linear-gradient(135deg, #cc8a00, #ffb92a);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   LISTADO CENTRADO PERFECTO
+==================================*/
+#listado {
+  display: flex;
+  flex-direction: column; /* título encima */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#listado h2 {
+  margin-bottom: 18px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+#tablaListado {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#tablaListado table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+#tablaListado th {
+  background: rgba(31, 104, 255, 0.8);
+  padding: 12px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#tablaListado td {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  font-size: 18px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#tablaListado tr:hover td {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ===============================
+   TARJETA RESUMEN FUTURISTA
+==================================*/
+.summaryBox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+}
+
+.summaryCard {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 28px;
+  width: 400px;
+  border-radius: 18px;
+  border: 2px solid rgba(0, 132, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 132, 255, 0.5);
+  text-align: center;
+  animation: fadeUp 0.35s ease-out;
+}
+
+.summaryCard button {
+  width: 100%;
+  background: var(--accent);
+}
+
+.summaryCard button:hover {
+  background: var(--accent-light);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===============================
+   DRAG & DROP — CUADRO FUTURISTA
+==================================*/
+.drop-area {
+  border: 2px dashed var(--accent-light);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 22px;
+  border-radius: var(--radius);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+  backdrop-filter: blur(var(--blur));
+  margin-top: 10px;
+}
+
+.drop-area:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.02);
+}
+/* Estado cuando el usuario arrastra un archivo encima */
+
+.drop-area.is-dragover {
+  background: rgba(44, 123, 229, 0.2);
+  border-color: var(--accent);
+  box-shadow: 0 0 15px var(--accent-light);
+}
+
+#preview-img {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  display: none;
+  border: 1px solid #555;
+  border-radius: 6px;
+}
+
+/* ===============================
+   RESPONSIVE
+==================================*/
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+  .menu {
+    width: 100%;
+  }
+  .menu nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
