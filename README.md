@@ -6,7 +6,7 @@ Proyecto realizado como parte del examen de *Desarrollo Web en Entorno Cliente �
 
 ##  Demo en GitHub Pages  
 Puedes acceder a la aplicación desplegada aquí:  
-**https://TU_USUARIO.github.io/TU_REPO/**  
+**https://moimenta84.github.io/Gestor-Parking/**  
 *(Sustituye por tu usuario y nombre de repositorio)*
 
 ---
